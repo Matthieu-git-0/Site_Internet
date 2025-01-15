@@ -6,10 +6,10 @@
 
 @font-face {
     font-family: 'PoliceOfficiel';
-    src: url('Brat Town.ttf') format('truetype'); /* Modifiez l'extension si nécessaire */
+    src: url('Brat Town.ttf') format('truetype');
 }
 body {
-    font-family: 'PoliceOfficiel', Arial, sans-serif; /* Police personnalisée en priorité */
+    font-family: 'PoliceOfficiel', Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -263,7 +263,7 @@ footer {
 }
 
 .team-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
     color: #0077b6;
 }
@@ -292,7 +292,6 @@ footer {
     color: #023e8a;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .team-card {
         flex: 1 1 calc(33.33% - 40px);
@@ -346,11 +345,40 @@ footer {
     align-items: center;
     text-align: center;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 70, 0.8)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
                 url('background_404.jpg') center/cover no-repeat;
     color: #ffffff;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
+}
+
+.error-container h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.error-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.error-container .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #0071e3;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.error-container .cta:hover {
+    background-color: #005bb5;
 }
 
 
@@ -487,7 +515,3 @@ footer {
 .document-image:hover .overlay-text {
     background: rgba(0, 0, 0, 0.8);
 }
-
-
-
-

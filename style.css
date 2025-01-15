@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: #333;
-    background-color: #f5f5f7;
-    line-height: 1.6;
+@font-face {
+    font-family: 'PoliceOfficiel';
+    src: url('Brat Town.ttf') format('truetype'); /* Modifiez l'extension si nécessaire */
 }
+body {
+    font-family: 'PoliceOfficiel', Arial, sans-serif; /* Police personnalisée en priorité */
+    margin: 0;
+    padding: 0;
+}
+
+
 
 header {
     display: flex;
@@ -228,8 +233,8 @@ footer {
 .team-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permet aux cards de passer à la ligne sur petit écran */
-    gap: 20px; /* Espacement entre les cards */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .team-card {
@@ -240,8 +245,8 @@ footer {
     text-align: center;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1 1 calc(20% - 40px); /* Ajuste les cards pour qu'elles tiennent sur la même ligne */
-    max-width: 280px; /* Empêche les cards d'être trop grandes */
+    flex: 1 1 calc(20% - 40px);
+    max-width: 280px;
 }
 
 .team-card:hover {
@@ -290,25 +295,25 @@ footer {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .team-card {
-        flex: 1 1 calc(33.33% - 40px); /* Sur tablette, 3 cards par ligne */
+        flex: 1 1 calc(33.33% - 40px);
     }
 }
 
 @media (max-width: 768px) {
     .team-card {
-        flex: 1 1 calc(50% - 40px); /* Sur mobile large, 2 cards par ligne */
+        flex: 1 1 calc(50% - 40px);
     }
 }
 
 @media (max-width: 480px) {
     .team-card {
-        flex: 1 1 100%; /* Sur mobile, 1 card par ligne */
+        flex: 1 1 100%;
     }
 }
 
 .instagram-text {
-    font-size: 1.8rem; /* Plus gros */
-    color: #0077b6; /* Bleu clair */
+    font-size: 1.8rem;
+    color: #0077b6;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -413,6 +418,74 @@ footer {
     display: inline-block;
     margin-left: 10px;
     animation: float 2s ease-in-out infinite;
+}
+
+
+.documents {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+.documents h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #005bb5;
+}
+
+.documents p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.document-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.document-group {
+    text-align: center;
+}
+
+.document-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.document-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s, filter 0.3s;
+    filter: brightness(0.8);
+}
+
+.document-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.document-image:hover .overlay-text {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 

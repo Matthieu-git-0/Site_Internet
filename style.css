@@ -479,8 +479,8 @@ footer {
 
 .document-image {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;

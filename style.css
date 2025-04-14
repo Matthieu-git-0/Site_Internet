@@ -10,10 +10,18 @@
 }
 body {
     font-family: 'PoliceOfficiel', Arial, sans-serif;
+    background-color: #0a0a1f;
+    color: #d0d0ff;
     margin: 0;
     padding: 0;
 }
+a {
+    color: #9ea7ff;
+}
 
+a:hover {
+    color: #b483ff;
+}
 
 
 header {
@@ -21,14 +29,14 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #15152a;
+    box-shadow: 0 2px 5px rgba(0, 0, 50, 0.6);
 }
 
 .logo {
+    color: #8c6eff;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #0071e3;
 }
 
 nav ul {
@@ -42,13 +50,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #d0d0ff;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #0071e3;
+    color: #aa88ff;
 }
 
 .hero {
@@ -75,19 +83,19 @@ nav ul li a:hover {
 .cta {
     display: inline-block;
     padding: 15px 40px;
-    background: linear-gradient(90deg, #0071e3, #005bb5);
+    background: linear-gradient(90deg, #5f43b2, #301c80);
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
     border-radius: 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 50, 0.4);
     transition: all 0.3s ease-in-out;
 }
 
 .cta:hover {
     transform: scale(1.05);
-    background: linear-gradient(90deg, #005bb5, #0071e3);
+    background: linear-gradient(90deg, #301c80, #5f43b2);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -133,7 +141,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 100px 20px;
     background: url('img/game-play.jpg') center/cover no-repeat;
-    color: #005bb5;
+    color: #b0a8ff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -148,13 +156,13 @@ nav ul li a:hover {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    color: #0071e3;
+    color: #b0a8ff;
 }
 
 .game .cta {
     padding: 15px 40px;
     background-color: #0071e3;
-    color: #ffffff;
+    color: #b0a8ff;
     font-weight: bold;
     border-radius: 50px;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -479,8 +487,8 @@ footer {
 
 .document-image {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
@@ -514,4 +522,100 @@ footer {
 
 .document-image:hover .overlay-text {
     background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+.documents {
+    background-color: #0a0a1f;
+    color: #d0d0ff;
+}
+
+.about h1,
+.about h2,
+.contact h1,
+.documents h1 {
+    color: #9faaff;
+}
+
+.about-content p,
+.contact p,
+.documents p {
+    color: #bdbdff;
+}
+
+.about-content img {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 50, 0.3);
+}
+
+footer {
+    background-color: #15152a;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
+
+.team-card {
+    background-color: #1a1a40;
+    color: #d0d0ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 50, 0.2);
+}
+
+.team-card h2 {
+    color: #a08cff;
+}
+
+.scroll-text {
+    color: #aaaaff;
+}
+
+.email {
+    color: #8caaff;
+}
+
+.email:hover {
+    color: #c0bfff;
+}
+
+.instagram-text {
+    color: #a08cff;
+}
+
+.instagram-button {
+    background: linear-gradient(45deg, #5f43b2, #6f2b9e, #8a3ab9, #bc1888, #3f0071);
+    color: white;
+}
+
+.document-image img {
+    filter: brightness(0.6);
+}
+
+.overlay-text {
+    background: rgba(40, 0, 80, 0.7);
+}
+
+.document-image:hover .overlay-text {
+    background: rgba(80, 0, 150, 0.8);
+}
+
+.error-page {
+    background: linear-gradient(rgba(5, 5, 20, 0.8), rgba(5, 5, 20, 0.8)), url('background_404.jpg') center/cover no-repeat;
+}
+
+.error-container h1, .error-container h2, .error-container p {
+    color: #b0a8ff;
+}
+
+.error-container .cta {
+    background: linear-gradient(90deg, #5f43b2, #301c80);
+    color: #ffffff;
+}
+
+.error-container .cta:hover {
+    background: linear-gradient(90deg, #301c80, #5f43b2);
 }

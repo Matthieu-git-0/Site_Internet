@@ -26,30 +26,42 @@
         <h1>The Complex : L'Aventure Commence</h1>
 
 
-        <p><br>
-            Il s’agit d’un jeu d'aventure et d’exfiltration où le personnage incarné devra résoudre des
-            énigmes pour survivre et s’échapper du complexe scientifique dans lequel il se retrouve.
-            Ce jeu se concentre sur l’horreur avec son atmosphère terrifiante, où l'absence
-            d'armements accentue la peur et l’urgence. Le joueur, à travers ce personnage, devra
-            résoudre une multitude d’énigmes en tout genre dans différentes salles du complexe,
-            qu'elles soient liées aux mécaniques de mouvement ou aux objets trouvés, comme des
-            clés ou des cartes cachées pouvant ouvrir certaines portes.</p>
+    <div class="carousel">
+        <div class="carousel-track">
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+                <img src="image-accueil.png" alt="Enigmes et exfiltration">
+                <div class="carousel-text">
+                    <h2>L'Aventure Commence</h2>
+                    <p>Un jeu d'aventure et d’exfiltration où vous devrez résoudre des énigmes pour survivre et vous échapper d’un complexe scientifique.</p>
+                </div>
+            </div>
 
-        <p>Certaines de ces énigmes feront écho à des thèmes profonds tels que le libre arbitre et
-            les questions morales, car le joueur sera amené à réfléchir sur le lien entre tous ces
-            indices, devant deviner quel indice est utile à quel endroit.</p>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+                <img src="image-accueil.png" alt="Réflexions morales">
+                <div class="carousel-text">
+                    <h2>Enigmes et Réflexions</h2>
+                    <p>Certains défis exploreront le libre arbitre et des dilemmes moraux, mêlant exploration et intuition pour progresser.</p>
+                </div>
+            </div>
 
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <img src="image-accueil.png" alt="Ambiance sonore et visuelle">
+                <div class="carousel-text">
+                    <h2>Une Ambiance Oppressante</h2>
+                    <p>Des graphismes sombres et une bande-son immersive accentuent l'urgence face aux scientifiques et à la maladie qui vous ronge.</p>
+                </div>
+            </div>
+        </div>
 
-        <p>Cette expérience immersive est accentuée par des graphismes sombres et une bandeson immersive qui plongent ainsi le joueur dans une ambiance oppressante. À tout
-            moment, des scientifiques peuvent apparaître pour attraper le personnage, ajoutant de
-            l'urgence et de la tension. De plus, la maladie qui ronge le corps du personnage
-            diminuera ses capacités physiques, rendant chaque énigme plus difficile à surmonter.</p>
+        <div class="carousel-buttons">
+            <button class="carousel-button prev">&#10094;</button>
+            <button class="carousel-button next">&#10095;</button>
+        </div>
+    </div>
 
-
-        <p>Avec son mélange d’horreur, de science-fiction et de questionnements éthiques, ce jeu
-            se présente comme une véritable expérience de survie. Survie, énigmes et aventure sont
-            donc les mots-clés à retenir. Il faudra être déterminé et astucieux pour réussir à se sortir
-            des griffes des scientifiques et de ce complexe.</p>
 
 
 
@@ -61,5 +73,33 @@
     <footer>
         <p>&copy; 2025 VORTEX - Tous droits reserves</p>
     </footer>
+
+
+    <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+    let index = 0;
+
+    function updateCarousel() {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${slideWidth * index}px)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+</script>
+
 </body>
 </html>

@@ -531,24 +531,57 @@ footer {
     color: #d0d0ff;
 }
 
-.about h1,
-.about h2,
-.contact h1,
-.documents h1 {
-    color: #9faaff;
-}
-
-.about-content p,
-.contact p,
-.documents p {
-    color: #bdbdff;
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin: 60px auto;
+    max-width: 1000px;
+    padding: 0 20px;
 }
 
 .about-content img {
     width: 40%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 50, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 50, 0.3);
 }
+
+.about-content p {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #cfd4ff;
+    line-height: 1.8;
+}
+
+.about-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.about h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #a08cff;
+    margin-top: 40px;
+}
+
+.about-quote {
+    margin: 80px auto 40px;
+    text-align: center;
+}
+
+.about-quote blockquote {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #bbbaff;
+    padding: 20px;
+    background: rgba(40, 0, 80, 0.2);
+    border-left: 4px solid #8c6eff;
+    border-radius: 8px;
+    max-width: 700px;
+    margin: auto;
+}
+
 
 footer {
     background-color: #15152a;
@@ -618,4 +651,61 @@ footer {
 
 .error-container .cta:hover {
     background: linear-gradient(90deg, #301c80, #5f43b2);
+}
+
+
+
+
+.carousel {
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 50, 0.3);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 50, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 50, 0.8);
 }

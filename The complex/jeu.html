@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Jeu - VORTEX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" type="png"
+    href="icone.png">
+</head>
+<body>
+    <header>
+        <div class="logo" >VORTEX</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="jeu.html" class="active">Le Jeu</a></li>
+                <li><a href="about.html">A Propos</a></li>
+                <li><a href="documents.html" class="active">Documents</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="game">
+        <h1>The Complex : L'Aventure Commence</h1>
+
+
+    <div class="carousel">
+        <div class="carousel-track">
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+                <img src="image-accueil.png" alt="Enigmes et exfiltration">
+                <div class="carousel-text">
+                    <h2>L'Aventure Commence</h2>
+                    <p>Un jeu d'aventure et d’exfiltration où vous devrez résoudre des énigmes pour survivre et vous échapper d’un complexe scientifique.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+                <img src="image-accueil.png" alt="Réflexions morales">
+                <div class="carousel-text">
+                    <h2>Enigmes et Réflexions</h2>
+                    <p>Certains défis exploreront le libre arbitre et des dilemmes moraux, mêlant exploration et intuition pour progresser.</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <img src="image-accueil.png" alt="Ambiance sonore et visuelle">
+                <div class="carousel-text">
+                    <h2>Une Ambiance Oppressante</h2>
+                    <p>Des graphismes sombres et une bande-son immersive accentuent l'urgence face aux scientifiques et à la maladie qui vous ronge.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-buttons">
+            <button class="carousel-button prev">&#10094;</button>
+            <button class="carousel-button next">&#10095;</button>
+        </div>
+    </div>
+
+
+
+
+
+
+        <a href="#" class="cta">Telecharger</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 VORTEX - Tous droits reserves</p>
+    </footer>
+
+
+    <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+    let index = 0;
+
+    function updateCarousel() {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${slideWidth * index}px)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+</script>
+
+</body>
+</html>

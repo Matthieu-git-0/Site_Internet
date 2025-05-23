@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources - VORTEX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" type="png"
+    href="icone.png">
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="Vortexlogo_transparent.png" alt="Logo Vortex" class="logo-img"></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="jeu.html">Le Jeu</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="ressources">
+        <h1>Ressources utilisées</h1>
+        <div class="ressources-grid">
+            <a href="https://unity.com/" target="_blank" class="ressource">
+                <img src="icons/unity.png" alt="Unity">
+                <span>Unity</span>
+            </a>
+            <a href="https://github.com/" target="_blank" class="ressource">
+                <img src="icons/github.png" alt="GitHub">
+                <span>GitHub</span>
+            </a>
+            <a href="https://code.visualstudio.com/" target="_blank" class="ressource">
+                <img src="icons/vscode.png" alt="VS Code">
+                <span>VS Code</span>
+            </a>
+            <a href="https://www.jetbrains.com/rider/" target="_blank" class="ressource">
+                <img src="icons/rider.png" alt="Rider">
+                <span>Rider</span>
+            </a>
+            <a href="https://www.notion.so/" target="_blank" class="ressource">
+                <img src="icons/notion.png" alt="Notion">
+                <span>Notion</span>
+            </a>
+        </div>
+
+        <h2>Liens forge des membres</h2>
+        <ul class="membres-liens">
+            <li><a href="https://cri.epita.fr/users/thomas.chauvire/">Lien de Thomas</a></li>
+            <li><a href="https://cri.epita.fr/users/mathieu.clement/">Lien de Mathieu</a></li>
+            <li><a href="https://cri.epita.fr/users/matthieu.deniau/">Lien de Matthieu</a></li>
+            <li><a href="https://cri.epita.fr/users/jules.cleret-bissoulet/">Lien de Jules</a></li>
+            <li><a href="https://cri.epita.fr/users/eduardo.costa-paulo/">Lien d’Eduardo</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 VORTEX - Tous droits réservés</p>
+    </footer>
+
+    <script>
+      const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+</body>
+</html>

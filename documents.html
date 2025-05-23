@@ -8,16 +8,24 @@
 </head>
 <body>
     <header>
-        <div class="logo">VORTEX</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="jeu.html">Le Jeu</a></li>
-                <li><a href="about.html">A Propos</a></li>
-                <li><a href="documents.html" class="active">Documents</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <a href="index.html"><img src="Vortexlogo_transparent.png" alt="Logo Vortex" class="logo-img"></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="jeu.html">Le Jeu</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
     </header>
 
     <section class="documents">
@@ -25,7 +33,6 @@
         <p>Découvrez et téléchargez nos documents en cliquant sur les images ci-dessous.</p>
 
         <div class="document-container">
-            <!-- Groupe 1 -->
             <div class="document-group">
                 <a href="cahier_des_charges.pdf" download>
                     <div class="document-image">
@@ -34,10 +41,8 @@
                     </div>
                 </a>
             </div>
-
-            <!-- Groupe 2 -->
             <div class="document-group">
-                <a href="Rapport.pdf" download>
+                <a href="rapport_de_soutenance.pdf" download>
                     <div class="document-image">
                         <img src="rapport_de_soutenance.png" alt="Rapport de Soutenance">
                         <div class="overlay-text">Rapport de Soutenance</div>
@@ -45,7 +50,6 @@
                 </a>
             </div>
 
-            <!-- Groupe 3 -->
             <div class="document-group">
                 <a href="plan_de_soutenance.pdf" download>
                     <div class="document-image">
@@ -55,7 +59,6 @@
                 </a>
             </div>
 
-            <!-- Groupe 4 -->
             <div class="document-group">
                 <a href="Design&Com.pdf" download>
                     <div class="document-image">
@@ -65,7 +68,6 @@
                 </a>
             </div>
 
-            <!-- Groupe 5 -->
             <div class="document-group">
                 <a href="Rapport_soutenance_2.pdf" download>
                     <div class="document-image">
@@ -80,5 +82,14 @@
     <footer>
         <p>&copy; 2025 VORTEX - Tous droits réservés</p>
     </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

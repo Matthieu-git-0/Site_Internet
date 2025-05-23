@@ -10,16 +10,24 @@
 </head>
 <body>
     <header>
-        <div class="logo" >VORTEX</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="jeu.html">Le Jeu</a></li>
-                <li><a href="about.html">A Propos</a></li>
-                <li><a href="documents.html" class="active">Documents</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <a href="index.html"><img src="Vortexlogo_transparent.png" alt="Logo Vortex" class="logo-img"></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="jeu.html">Le Jeu</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+        </ul>
+        <div class="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
     </header>
 
     <section class="hero">
@@ -32,12 +40,22 @@
 
     <section class="about">
         <h2>À propos de The Complex</h2>
-        <p>Developpe par VORTEX, The Complex vous plonge dans une intrigue passionnante au coeur d'un complexe scientifique en Antarctique. Resolvez des enigmes, explorez des lieux mysterieux, et decouvrez les secrets caches dans cet endroit isole et glacial.</p>
+        <p>Developpe par Vortex Studio™ , The Complex vous plonge dans une intrigue passionnante au coeur d'un complexe scientifique en Antarctique. Resolvez des enigmes, explorez des lieux mysterieux, et decouvrez les secrets caches dans cet endroit isole et glacial.</p>
     </section>
 
     <footer>
         <p>&copy; 2025 VORTEX - Tous droits reserves</p>
     </footer>
+
+    <script>
+      const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+
 </body>
 </html>
 

@@ -10,20 +10,28 @@
 </head>
 <body>
     <header>
-        <div class="logo">VORTEX</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="jeu.html">Le Jeu</a></li>
-                <li><a href="about.html">A Propos</a></li>
-                <li><a href="documents.html" class="active">Documents</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <a href="index.html"><img src="Vortexlogo_transparent.png" alt="Logo Vortex" class="logo-img"></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="jeu.html">Le Jeu</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
     </header>
 
     <section class="contact">
-        <h1>Notre Équipe</h1>
+        <h1>Notre equipe</h1>
         <div class="team-container">
             <div class="team-card">
                 <img src="thomas.chauvire.png" alt="Membre 4">
@@ -120,5 +128,14 @@ milieu professionnel.</p>
     <footer>
         <p>&copy; 2025 VORTEX - Tous droits reserves</p>
     </footer>
+
+    <script>
+      const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
 </body>
 </html>

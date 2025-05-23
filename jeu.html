@@ -10,16 +10,24 @@
 </head>
 <body>
     <header>
-        <div class="logo" >VORTEX</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="jeu.html" class="active">Le Jeu</a></li>
-                <li><a href="about.html">A Propos</a></li>
-                <li><a href="documents.html" class="active">Documents</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="logo">
+        <a href="index.html"><img src="Vortexlogo_transparent.png" alt="Logo Vortex" class="logo-img"></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="jeu.html">Le Jeu</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="documents.html">Documents</a></li>
+          <li><a href="ressources.html">Ressources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
     </header>
 
     <section class="game">
@@ -30,7 +38,7 @@
         <div class="carousel-track">
             <!-- Slide 1 -->
             <div class="carousel-slide">
-                <img src="image-accueil.png" alt="Enigmes et exfiltration">
+                <img src="morgue.webp" alt="Enigmes et exfiltration">
                 <div class="carousel-text">
                     <br><br>
                     <h2>L'Aventure Commence</h2>
@@ -41,12 +49,12 @@
 
             <!-- Slide 2 -->
             <div class="carousel-slide">
-                <img src="image-accueil.png" alt="Réflexions morales">
+                <img src="serveur.webp" alt="Réflexions morales">
                 <div class="carousel-text">
                     <br><br>
                     <h2>Enigmes et Réflexions</h2>
                     <br>
-                    <p>Certains défis exploreront le libre arbitre et des dilemmes moraux, mêlant exploration et intuition pour progresser.</p>
+                    <p>Certains défis vous demanderons des qualités en exploration et une bonne intuition pour pouvoir progresser.</p>
                 </div>
             </div>
 
@@ -73,6 +81,7 @@
 
 
 
+        <a href="lore.html" class="cta secondary-cta">Découvrir le Lore</a>
         <a href="#" class="cta">Telecharger</a>
     </section>
 
@@ -105,7 +114,15 @@
 
     window.addEventListener('resize', updateCarousel);
     updateCarousel();
-</script>
+    </script>
+    <script>
+      const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
 
 </body>
 </html>

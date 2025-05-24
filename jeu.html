@@ -35,40 +35,57 @@
 
 
     <div class="carousel">
-        <div class="carousel-track">
-            <!-- Slide 1 -->
-            <div class="carousel-slide">
-                <img src="morgue.webp" alt="Enigmes et exfiltration">
-                <div class="carousel-text">
-                    <br><br>
-                    <h2>L'Aventure Commence</h2>
-                    <br>
-                    <p>Un jeu d'aventure et d’exfiltration où vous devrez résoudre des énigmes pour survivre et vous échapper d’un complexe scientifique.</p>
-                </div>
-            </div>
+      <div class="carousel-track">
+        <!-- Slide 1 avec vidéo -->
+        <div class="carousel-slide">
+          <div class="video-wrapper">
+            <video id="trailerVideo" class="carousel-video" src="trailer.mp4"></video>
 
-            <!-- Slide 2 -->
-            <div class="carousel-slide">
-                <img src="serveur.webp" alt="Réflexions morales">
-                <div class="carousel-text">
-                    <br><br>
-                    <h2>Enigmes et Réflexions</h2>
-                    <br>
-                    <p>Certains défis vous demanderons des qualités en exploration et une bonne intuition pour pouvoir progresser.</p>
-                </div>
+            <div class="video-controls">
+              <button id="backward">⏪ 10s</button>
+              <button id="playPause">▶️</button>
+              <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+              <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+              <select id="speed">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+              </select>
+              <button id="fullscreen">⛶</button>
             </div>
+          </div>
 
-            <!-- Slide 3 -->
-            <div class="carousel-slide">
-                <img src="image-accueil.png" alt="Ambiance sonore et visuelle">
-                <div class="carousel-text">
-                    <br><br>
-                    <h2>Une Ambiance Oppressante</h2>
-                    <br>
-                    <p>Des graphismes sombres et une bande-son immersive accentuent l'urgence face aux scientifiques et à la maladie qui vous ronge.</p>
-                </div>
-            </div>
+          <div class="carousel-text">
+            <h2>L'Aventure Commence</h2>
+            <br>
+            <p>Un jeu d'aventure et d’exfiltration où vous devrez résoudre des énigmes pour survivre et vous échapper d’un complexe scientifique.</p>
+          </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+          <img src="serveur.webp" alt="Réflexions morales">
+          <div class="carousel-text">
+            <br><br>
+            <h2>Enigmes et Réflexions</h2>
+            <br>
+            <p>Certains défis vous demanderons des qualités en exploration et une bonne intuition pour pouvoir progresser.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+          <img src="image-accueil.png" alt="Ambiance sonore et visuelle">
+          <div class="carousel-text">
+            <br><br>
+            <h2>Une Ambiance Oppressante</h2>
+            <br>
+            <p>Des graphismes sombres et une bande-son immersive accentuent l'urgence face aux scientifiques et à la maladie qui vous ronge.</p>
+          </div>
+        </div>
+      </div>
+
 
         <div class="carousel-buttons">
             <button class="carousel-button prev">&#10094;</button>
@@ -125,6 +142,65 @@
       burger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
       });
+
+
+
+    const video = document.getElementById('trailerVideo');
+    const playPause = document.getElementById('playPause');
+    const backward = document.getElementById('backward');
+    const volume = document.getElementById('volume');
+    const speed = document.getElementById('speed');
+    const fullscreen = document.getElementById('fullscreen');
+    const currentTime = document.getElementById('currentTime');
+    const duration = document.getElementById('duration');
+
+    function formatTime(time) {
+      const minutes = Math.floor(time / 60);
+      const seconds = Math.floor(time % 60).toString().padStart(2, '0');
+      return `${minutes}:${seconds}`;
+    }
+
+    video.addEventListener('loadedmetadata', () => {
+      duration.textContent = formatTime(video.duration);
+    });
+
+    video.addEventListener('timeupdate', () => {
+      currentTime.textContent = formatTime(video.currentTime);
+    });
+
+    playPause.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        playPause.textContent = '⏸️';
+      } else {
+        video.pause();
+        playPause.textContent = '▶️';
+      }
+    });
+
+    backward.addEventListener('click', () => {
+      video.currentTime = Math.max(0, video.currentTime - 10);
+    });
+
+    volume.addEventListener('input', () => {
+      video.volume = volume.value;
+    });
+
+    speed.addEventListener('change', () => {
+      video.playbackRate = speed.value;
+    });
+
+    fullscreen.addEventListener('click', () => {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
+      }
+    });
+
+
     </script>
 
 </body>

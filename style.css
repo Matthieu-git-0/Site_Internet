@@ -1027,3 +1027,50 @@ footer {
   font-size: 1rem;
 }
 
+
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.carousel-video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  background: #000;
+}
+
+.video-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.video-controls button,
+.video-controls select {
+  background-color: #301c80;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.video-controls input[type="range"] {
+  width: 100px;
+}
+
+.video-controls span {
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #d0d0ff;
+}
+
+
